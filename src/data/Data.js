@@ -71,3 +71,14 @@ export const categories =[
         img:'',
     },
 ]
+
+export const products=[
+    {
+        id:1,
+        title:"test",
+        img:'',
+        rating:'',
+        rice:""
+
+    }
+]

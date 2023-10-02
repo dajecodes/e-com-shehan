@@ -10,7 +10,7 @@ import "swiper/css/pagination";
 // import './styles.css';
 
 // import required modules
-import { EffectFade, Navigation, Pagination } from "swiper/modules";
+import { EffectFade, Navigation, Autoplay } from "swiper/modules";
 
 const FullWidthSlider = () => {
   return (
@@ -19,10 +19,12 @@ const FullWidthSlider = () => {
         spaceBetween={30}
         effect={"fade"}
         navigation={true}
-        pagination={{
-          clickable: true,
+        autoplay={{
+          delay: 3000,
+          disableOnInteraction: false,
         }}
-        modules={[EffectFade, Navigation, Pagination]}
+        
+        modules={[EffectFade, Navigation,Autoplay]}
         className="mySwiper"
       >
         <SwiperSlide><FullWidthCard title={'Tissot-Black dial with golden ring'}/></SwiperSlide>

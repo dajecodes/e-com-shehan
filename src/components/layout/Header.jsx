@@ -26,7 +26,7 @@ const Header = () => {
             className="navbar-brand col-6 col-md-3 d-flex justfy-content-center align-items-center mb-2"
           >
             <img
-              src="https://s3-alpha-sig.figma.com/img/31df/1436/ba37da19d94a2bf474f4e05419f02fd7?Expires=1695600000&Signature=epevSYohxXs6s4Dja~bv0vNtAQdyif9ZeAMh18tBH28KDAiBzJIPqaH5QyQGHrlq4aqrsmyJXrdycTBeyO08dKvUDd1k6ve12ghxxVs76nNTtCp8XsZ5RhlzSt2ZuMXwwZv05AUbsD6g80y~h7S1VErb9EN37oxUylciQmYkzhD-p2qVJVx-E-pNFyJbFJvpRF9erhYvCmL625KHABlVHQsOCq0K~8JAP6T9jJg1sI8vRTyQztF9TiZIP0Ko39dRqGO3N9Txvq67ewdZ-OpJGn-q4prrY-LtMA0PTb6YnfykZ9Jog2m5h-QiAvyfyCCnPzhQ0QjIFeG~j0ozCfGBlg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+              src="/assets/logo.png"
               alt="logo"
               className="img-fluid"
               width={"25%"}
@@ -106,7 +106,15 @@ const Header = () => {
                 
         </div>
       </div> 
-
+      <div className="container d-none d-md-flex">
+        <ul className="nav justify-content-around ">
+          {categories.map((item) => (
+            <li key={item.id} className=" ">
+              <NavLink className={"nav-link"}>{item.title}</NavLink>
+            </li>
+          ))}
+        </ul>
+      </div>
     </div>
   );
 };
